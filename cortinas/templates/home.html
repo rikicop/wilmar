@@ -1,0 +1,249 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--========== BOX ICONS ==========-->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+    <!--========== CSS ==========-->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+    <title>Persianas Boutique</title>
+</head>
+
+<body>
+
+    <!--========== SCROLL TOP ==========-->
+    <a href="#" class="scrolltop" id="scroll-top">
+        <i class='bx bx-chevron-up scrolltop__icon'></i>
+    </a>
+
+    <!--========== HEADER ==========-->
+    <header class="l-header" id="header">
+        <div class="colum_one">
+            <i class='bx bxs-phone'></i><a href="tel:+584247374178" style="text-decoration: none; color: inherit;">+584247374178</a> &nbsp;
+            <a href="https://www.instagram.com/persianas_boutique/" style="text-decoration: none; color: inherit;" target="_blank" rel="noopener noreferrer">
+                <i class='bx bxl-instagram-alt'></i> persianas_boutique
+            </a>
+        </div>
+        <nav class="nav bd-container">
+            <a href="#" class="nav__logo">Persianas Boutique</a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+
+                    <li class="nav__item"><a href="#home" class="nav__link active-link">Principal</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">Nosotros</a></li>
+                    <li class="nav__item"><a href="#services" class="nav__link">Servicios</a></li>
+                    <li class="nav__item"><a href="#menu" class="nav__link">Productos</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Contacto</a></li>
+
+                    <li><i class='bx bx-moon change-theme' id="theme-button"></i></li>
+                </ul>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="l-main">
+        <!--========== HOME ==========-->
+        <section class="home" id="home">
+            <div class="home__container bd-container bd-grid">
+                <div class="home__data">
+                    <h1 class="home__title">Persianas Boutique</h1>
+                    <h2 class="home__subtitle">Adquiere el mejor servicio en persianas<br>aquí.</h2>
+                    <a href="#" class="button">Todos Nuestros Precios</a>
+                </div>
+
+                <img src="{% static 'img/home.jpeg' %}" alt="" class="home__img">
+            </div>
+        </section>
+
+        <!--========== ABOUT ==========-->
+        <section class="about section bd-container" id="about">
+            <div class="about__container  bd-grid">
+
+                <div class="about__data">
+                    <span class="section-subtitle about__initial">Nuestros Productos</span>
+                    <h2 class="section-title about__initial">Sheer poliéster<br>
+                        <!-- tasty food -->
+                    </h2>
+                    <p class="about__description">La persiana Sheer Elegance Poliéster es un elemento decorativo utilizado en espacios de todo tipo, caracterizado por un elegante tejido en Jacquard, con material fabricado 100% en Poliéster y compuesto por dos clases de franjas horizontales.</p>
+                    <!--  <a href="#" class="button">Ver más</a>  -->
+                </div>
+                <div class="about__data">
+                    <img src="{% static 'img/about.jpeg' %}" alt="" class="about__img">
+                    <a href="#" class="button">Ver más</a>
+                </div>
+                <!-- <img src="assets/img/about.jpeg" alt="" class="about__img"> -->
+
+
+            </div>
+        </section>
+
+        <!--========== SERVICES ==========-->
+        <section class="services section bd-container" id="services">
+            <span class="section-subtitle">Offering</span>
+            <h2 class="section-title">Our amazing services</h2>
+
+            <div class="services__container  bd-grid">
+                <div class="services__content">
+                    <img src="{% static 'img/instalacion.png' %}" alt="">
+
+                    <h3 class="services__title">Servicio de Instalación</h3>
+                    <p class="services__description">Para venderle, o para instalar, estamos para servirle. Somos empresa líder en la venta e instalación de productos para el control solar, para casas, oficinas, pequeñas y grandes empresas.</p>
+                </div>
+
+                <div class="services__content">
+                    <img src="{% static 'img/cortina80.png' %}" alt="">
+                    <h3 class="services__title">Materiales</h3>
+                    <p class="services__description">Tenemos muchos tipos de protecciones solares para utilizar en las ventanas; cortinas de tela, toldos, estores…etc.</p>
+                </div>
+
+                <div class="services__content">
+                    <img src="{% static 'img/delivery.png' %}" alt="">
+                    <h3 class="services__title">Delivery</h3>
+                    <p class="services__description">Ofrecemos solución integral en envíos garantizados de nuestros productos.</p>
+                </div>
+            </div>
+        </section>
+
+        <!--========== MENU ==========-->
+        <section class="menu section bd-container" id="menu">
+            <span class="section-subtitle">Productos</span>
+            <h2 class="section-title">Nuestros Productos Más Cotizados</h2>
+
+            <div class="menu__container bd-grid">
+                {%  for cortina in prod %}
+                <div class="menu__content">
+                   <!--  <img src="{% static 'img/sheer_poliester.jpeg' %}" alt="" class="menu__img"> -->
+                    <h3 class="menu__name">{{cortina.name}}</h3>
+                    <span class="menu__detail">{{cortina.description}}</span>
+                    <span class="menu__preci">{{cortina.price}} x Mt </span>
+                    <a href="{% url 'detalle' cortina.id %}" class="button menu__button">
+                        <i class='bx bx-cart-alt'></i>
+                    </a>
+                </div>
+                {% endfor %}
+               <!--  <div class="menu__content">
+                    <img src="{% static 'img/screen_satand.jpeg' %}" alt="" class="menu__img">
+                    <h3 class="menu__name">Screen Satand</h3>
+                    <span class="menu__detail">Gris</span>
+                    <span class="menu__preci">$140.00 x Mt</span>
+                    <a href="#" class="button menu__button"><i class='bx bx-cart-alt'></i></a>
+                </div>
+
+                <div class="menu__content">
+                    <img src="{% static 'img/screen_premium.jpeg' %}" alt="" class="menu__img">
+                    <h3 class="menu__name">Screen Premium </h3>
+                    <span class="menu__detail">Crema</span>
+                    <span class="menu__preci">$130.50 x Mt</span>
+                    <a href="#" class="button menu__button"><i class='bx bx-cart-alt'></i></a>
+                </div>
+                <div class="menu__content">
+                    <img src="{% static 'img/screen_premium_con_blackath.jpeg' %}" alt="" class="menu__img">
+                    <h3 class="menu__name">Screen Premium con Blackath</h3>
+                    <span class="menu__detail">Caqui</span>
+                    <span class="menu__preci">$195.50 x Mt</span>
+                    <a href="#" class="button menu__button"><i class='bx bx-cart-alt'></i></a>
+                </div> -->
+            </div>
+        </section>
+
+        <!--===== APP =======-->
+        <section class="app section bd-container">
+            <div class="app__container bd-grid">
+                <div class="app__data">
+                    <span class="section-subtitle app__initial">Innovaciones</span>
+                    <h2 class="section-title app__initial">Panel Japones</h2>
+                    <p class="app__description">Son fabricadas especialmente para cubrir grandes áreas de una casa u oficina, traslapan unas con otras y se deslizan de manera vertical.
+
+                        Estas cortinas que ofrecen un ambiente fresco, ya que están hechas para permitir el flujo del aire y además el material usado en su elaboración es especial en impedir el calor producido por los rayos solares. Vienen de uso manual o motorizada.</p>
+                    <div class="app__stores">
+                        <!-- <a href="#"><img src="assets/img/app1.png" alt="" class="app__store"></a>
+                        <a href="#"><img src="assets/img/app2.png" alt="" class="app__store"></a> -->
+                    </div>
+                </div>
+
+                <img src="{% static 'img/paneljap.jpg' %}" alt="" class="app__img">
+            </div>
+        </section>
+
+        <!--========== CONTACT US ==========-->
+        <section class="contact section bd-container" id="contact">
+            <div class="contact__container bd-grid">
+                <div class="contact__data">
+                    <span class="section-subtitle contact__initial">Hablemos</span>
+                    <h2 class="section-title contact__initial">Contáctenos</h2>
+                    <p class="contact__description">Atenderemos cualquiera de sus inquietudes 7 días a la semana. Contáctenos ahora mismo!</p>
+                </div>
+
+                <div class="contact__button">
+                    <a href="#" class="button">Contact us now</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!--========== FOOTER ==========-->
+    <footer class="footer section bd-container">
+        <div class="footer__container bd-grid">
+            <div class="footer__content">
+                <a href="#" class="footer__logo">Tasty Food</a>
+                <span class="footer__description">Restaurant</span>
+                <div>
+                    <a href="#" class="footer__social"><i class='bx bxl-facebook'></i></a>
+                    <a href="#" class="footer__social"><i class='bx bxl-instagram'></i></a>
+                    <a href="#" class="footer__social"><i class='bx bxl-twitter'></i></a>
+                </div>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Services</h3>
+                <ul>
+                    <li><a href="#services" class="footer__link">Servicio de Instalación</a></li>
+                    <li><a href="#services" class="footer__link">Materiales</a></li>
+                    <li><a href="#services" class="footer__link">Delivery</a></li>
+                    
+                </ul>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Information</h3>
+                <ul>
+                    <li><a href="#home" class="footer__link">Home</a></li>
+                    <li><a href="#about" class="footer__link">Nosotros</a></li>
+                    <li><a href="#menu" class="footer__link">Productos</a></li>
+                    <li><a href="#contact" class="footer__link">Contactos</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Adress</h3>
+                <ul>
+                    <li>Lima - Peru</li>
+                    <li>Jr Union #999</li>
+                    <li>999 - 888 - 777</li>
+                    <li>tastyfood@email.com</li>
+                </ul>
+            </div>
+        </div>
+
+        <p class="footer__copy">&#169; 2020 Bedimcode. All right reserved</p>
+    </footer>
+
+    <!--========== SCROLL REVEAL ==========-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!--========== MAIN JS ==========-->
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>
