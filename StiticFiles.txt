@@ -1,0 +1,5 @@
+ahora el static los agarra de wilmar_project 
+hay algo en settings que proboca eso
+
+enontces cuando vayas a subirlo a pythonanywhere debes
+tener eso en cuenta
