@@ -30,14 +30,14 @@
     <!--========== HEADER ==========-->
     <header class="l-header" id="header">
         <div class="colum_one">
-            <i class='bx bxs-phone'></i><a href="tel:+584247374178" style="text-decoration: none; color: inherit;">+584247374178</a> &nbsp;
-            <a href="https://www.instagram.com/persianas_boutique/" style="text-decoration: none; color: inherit;" target="_blank" rel="noopener noreferrer">
-                <i class='bx bxl-instagram-alt'></i> persianas_boutique
+            <i class='bx bxs-phone' ></i><a href="tel:+584247374178" style="text-decoration: none; color:  white;">+584247374178</a> &nbsp;
+            <a href="https://www.instagram.com/persianas_boutique/" style="text-decoration: none; color:  white;" target="_blank" rel="noopener noreferrer">
+                <i class='bx bxl-instagram-alt'  style="color: white;" ></i> persianas_boutique
             </a>
         </div>
         <nav class="nav bd-container">
-            <a href="#" class="nav__logo">Persianas Boutique</a>
-
+            <a href="#" class="nav__logo" >Persianas Boutique</a>
+            {% block menu %}
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
 
@@ -47,13 +47,15 @@
                     <li class="nav__item"><a href="#menu" class="nav__link">Productos</a></li>
                     <li class="nav__item"><a href="#contact" class="nav__link">Contacto</a></li>
 
-                    <li><i class='bx bx-moon change-theme' id="theme-button"></i></li>
+                    <!-- <li><i class='bx bx-moon change-theme' id="theme-button"></i></li> -->
                 </ul>
             </div>
-
+            {% endblock %}
+            {% block toggle %}
             <div class="nav__toggle" id="nav-toggle">
                 <i class='bx bx-menu'></i>
             </div>
+            {% endblock %}
         </nav>
     </header>
 

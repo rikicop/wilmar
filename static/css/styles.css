@@ -9,10 +9,10 @@
   --first-color: #00b39e;
   --first-color-alt: #048654;
   --title-color: #393939;
-  --text-color: #707070;
-  --text-color-light: #A6A6A6;
-  --body-color: #FBFEFD;
-  --container-color: #FFFFFF;
+  --text-color: #3f3d3d;
+  --text-color-light: #363333;
+  --body-color: #1c2331;
+  --container-color: #1c2331;
 
   /*========== Font and typography ==========*/
   --body-font: 'Poppins', sans-serif;
@@ -203,6 +203,7 @@ img{
 }
 
 .nav__toggle{
+  
   font-size: 1.3rem;
   cursor: pointer;
 }

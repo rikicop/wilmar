@@ -99,6 +99,7 @@ hr{
     color: white;
     border-radius: 0;
     margin-left: 10px;
+    margin-bottom: 20px;
 }
 .cart button:first-of-type{
     padding: 15px 10px;

@@ -1,5 +1,19 @@
 {% extends 'base.html' %} 
 {% load static %}
+{% block menu %}
+<div class="nav__menu" style="margin-right: 60px;" id="nav-menu">
+    <ul class="nav__list">
+
+        <li class="nav__item"><a href="{% url 'home' %}" class="nav__link"><i class='bx bx-arrow-back'></i></a></li>
+    </ul>
+</div>
+{% endblock %}
+
+{% block toggle %}
+<div class="nav__toggle" style="margin-right: 60px;" id="nav-toggle">
+    <a href="{% url 'home' %}" class="nav__link"><i class='bx bx-arrow-back'></i></a>
+</div>
+{% endblock %}
 
 {% block content %}
     <main>
