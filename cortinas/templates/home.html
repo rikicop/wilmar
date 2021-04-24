@@ -1,5 +1,6 @@
 {% extends 'base.html' %} 
 {% load static %}
+
 {% block content %}
     <main class="l-main">
         <!--========== HOME ==========-->
@@ -8,7 +9,7 @@
                 <div class="home__data">
                     <h1 class="home__title">Persianas Boutique</h1>
                     <h2 class="home__subtitle">Adquiere el mejor servicio en persianas<br>aquí.</h2>
-                    <a href="#" class="button">Todos Nuestros Precios</a>
+                    <a href="http://192.168.0.107:8000/download_file" class="button">Todos Nuestros Precios</a>
                 </div>
 
                 <img src="{% static 'img/home.jpeg' %}" alt="" class="home__img">
@@ -29,7 +30,7 @@
                 </div>
                 <div class="about__data">
                     <img src="{% static 'img/about.jpeg' %}" alt="" class="about__img">
-                    <a href="#" class="button">Ver más</a>
+                   <!--  <a href="#" class="button">Ver más</a> -->
                 </div>
                 <!-- <img src="assets/img/about.jpeg" alt="" class="about__img"> -->
 
@@ -81,7 +82,7 @@
                     <span class="menu__detail">{{cortina.description}}</span>
                     <span class="menu__preci">{{cortina.price}} x Mt </span>
                     <a href="{% url 'detalle' cortina.id %}" class="button menu__button">
-                        <i class='bx bx-cart-alt'></i>
+                        Ver
                     </a>
                 </div>
                 {% endfor %}
@@ -195,7 +196,7 @@
                 </div>
 
                 <div class="contact__button">
-                    <a href="#" class="button">Contact us now</a>
+                    <a href="#footer" class="button">Contact us now</a>
                 </div>
             </div>
         </section>

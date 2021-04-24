@@ -7,7 +7,7 @@
 
   /*========== Colors ==========*/
   --first-color: #284683;
-  --first-color-alt: #048654;
+  --first-color-alt: #808e89;
   --title-color: #393939;
   --text-color: #3f3d3d;
   --text-color-light: #363333;
@@ -289,7 +289,7 @@ img{
 }
 
 .button:hover{
-  background-color: var(--first-color-alt);
+  background-color: #808e89;
 }
 
 /*========== ABOUT ==========*/
