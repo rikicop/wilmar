@@ -69,6 +69,7 @@ hr{
     font-size: 2em;
     font-weight: 400;
     letter-spacing: 3px;
+    color: black;
 }
 .parameter h1{
     font-weight: 700;
@@ -91,6 +92,7 @@ hr{
 .parameter h2{
     font-weight: 700;
     font-size: 3em;
+    color: black;
 }
 .parameter h2 span{
     font-weight: 400;

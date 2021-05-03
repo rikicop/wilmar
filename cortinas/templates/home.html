@@ -40,8 +40,8 @@
 
         <!--========== SERVICES ==========-->
         <section class="services section bd-container" id="services">
-            <span class="section-subtitle">Offering</span>
-            <h2 class="section-title">Our amazing services</h2>
+            <span class="section-subtitle">Ofertas</span>
+            <h2 class="section-title">Nuestros Increíbles Servicios</h2>
 
             <div class="services__container  bd-grid">
                 <div class="services__content">
@@ -78,7 +78,7 @@
                     from django.conf.urls.static import static
                     ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) -->
                     {% if cortina.img %}
-                        <img src="{{cortina.img.url}}" alt="" class="menu__img"> 
+                        <img src="{{cortina.img.url}}" alt=""  class="menu__img"> 
                     {% endif %}
                     <h3 class="menu__name">{{cortina.name}}</h3>
                     <span class="menu__detail">{{cortina.description}}</span>
@@ -198,7 +198,7 @@
                 </div>
 
                 <div class="contact__button">
-                    <a href="#footer" class="button">Contact us now</a>
+                    <a href="#footer" class="button">Contacte con nosotros</a>
                 </div>
             </div>
         </section>
