@@ -104,7 +104,7 @@ a{
 
 img{
   max-width: 100%;
-  height: auto;
+  height: 100%;
 }
 
 /*========== CLASS CSS ==========*/
@@ -428,7 +428,7 @@ margin: 0;
 padding: 0;
 font-size: 20px;
 text-align: center;
-line-height: 20px;
+line-height: 15px;
 }
 
 .swiper-slide .details h3 span

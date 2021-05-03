@@ -9,7 +9,7 @@
                 <div class="home__data">
                     <h1 class="home__title">Persianas Boutique</h1>
                     <h2 class="home__subtitle">Adquiere el mejor servicio en persianas<br>aquí.</h2>
-                    <a href="http://192.168.0.107:8000/download_file" class="button">Todos Nuestros Precios</a>
+                    <a href="{% url 'tabla' %}" class="button">Todos Nuestros Precios</a>
                 </div>
 
                 <img src="{% static 'img/home.jpeg' %}" alt="" class="home__img">
@@ -77,10 +77,12 @@
                     from django.conf import settings 
                     from django.conf.urls.static import static
                     ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) -->
-                    <img src="{{cortina.img.url}}" alt="" class="menu__img"> 
+                    {% if cortina.img %}
+                        <img src="{{cortina.img.url}}" alt="" class="menu__img"> 
+                    {% endif %}
                     <h3 class="menu__name">{{cortina.name}}</h3>
                     <span class="menu__detail">{{cortina.description}}</span>
-                    <span class="menu__preci">{{cortina.price}} x Mt </span>
+                    <span class="menu__preci">{{cortina.price}} x Mt2 </span>
                     <a href="{% url 'detalle' cortina.id %}" class="button menu__button">
                         Ver
                     </a>
@@ -106,9 +108,9 @@
                     <div class="imgBx">
                     <img src="{% static 'img/tela19.jpeg' %}" alt="">
                     </div>
-                    <div class="details">
-                    <h3>Screen #1  <br> <!-- <span>Web Designer</span> --> </h3>
-                    </div>
+                    <!-- <div class="details">
+                    <h3>Screen #1</h3>
+                    </div> -->
                 </div>
                 <div class="swiper-slide">
                     <div class="imgBx">
