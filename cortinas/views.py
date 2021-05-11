@@ -29,6 +29,11 @@ def tabla(request):
     context = {'d': data}
     return render(request, 'tabla.html', context)
 
+def videos(request):
+    data = []
+    context = {'d': data}
+    return render(request, 'videos.html', context)
+
 def download_file(request):
   
     fl_path = 'media/precios.csv'
