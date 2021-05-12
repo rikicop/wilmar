@@ -28,8 +28,8 @@ class Product(models.Model):
 class Videos(models.Model):
     
     name =  models.CharField(max_length=200, null=True)
-    description = models.CharField(max_length=200,null= True,blank=True)
-    img = models.FileField(blank=True, null=True)
+    description = models.CharField(max_length=600,null= True,blank=True)
+    img = models.CharField(max_length=200,blank=True, null=True)
 
     def __str__(self):
         return self.name

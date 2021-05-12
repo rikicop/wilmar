@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Product, Post
+from .models import Product, Post, Videos
 import mimetypes
 import json
 
@@ -30,8 +30,8 @@ def tabla(request):
     return render(request, 'tabla.html', context)
 
 def videos(request):
-    data = []
-    context = {'d': data}
+    videos = Videos.objects.all()
+    context = {'data': videos}
     return render(request, 'videos.html', context)
 
 def download_file(request):
